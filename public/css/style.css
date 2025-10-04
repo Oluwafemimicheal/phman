@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: block;
+  src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: block;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.hero-section,
+.testimony {
+  background: url("../image/hero-bg.jpeg") no-repeat center/cover;
+}
+
+button:hover {
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+}
