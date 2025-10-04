@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- Hero and navbar section -->
@@ -284,67 +288,76 @@
         </div>
       </section>
       <section class="py-10 lg:py-20">
-        <div
-          class="lg:w-[1200px] mx-auto grid px-5 lg:px-0 lg:grid-cols-4 lg:h-[260px] gap-10"
-        >
-          <article
-            class="relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/bible.jpg')]"
+        <div class="swiper lg:w-[1200px] mx-auto flex flex-col">
+          <div
+            class="swiper-wrapper grid px-5 lg:px-0 grid-cols-4 lg:h-[260px] gap-10"
           >
-            <div
-              class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
+            <article
+              class="swiper-slide relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/bible.jpg')]"
             >
-              <h4 class="mb-5">
-                POWER IN WORD VIDEO SERIES Power in Word Video Series
-              </h4>
-              <button
-                class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+              <div
+                class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
               >
-                VISIT HERE
-              </button>
-            </div>
-          </article>
-          <article
-            class="relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/Apostle-removebg-preview.png')]"
-          >
-            <div
-              class="absolute inset-0 bg-[#44033E] bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
+                <h4 class="mb-5">
+                  POWER IN WORD VIDEO SERIES Power in Word Video Series
+                </h4>
+                <button
+                  class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+                >
+                  VISIT HERE
+                </button>
+              </div>
+            </article>
+            <article
+              class="swiper-slide relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/Apostle-removebg-preview.png')]"
             >
-              <h4 class="mb-5">Learn from Apostle David Oluwapemi</h4>
-              <button
-                class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+              <div
+                class="absolute inset-0 bg-[#44033E] bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
               >
-                VISIT HERE
-              </button>
-            </div>
-          </article>
-          <article
-            class="relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/baptism.jpg')]"
-          >
-            <div
-              class="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
+                <h4 class="mb-5">Learn from Apostle David Oluwapemi</h4>
+                <button
+                  class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+                >
+                  VISIT HERE
+                </button>
+              </div>
+            </article>
+            <article
+              class="swiper-slide relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/baptism.jpg')]"
             >
-              <h4 class="mb-5">Foundation of Faith Baptismal Course</h4>
-              <button
-                class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+              <div
+                class="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
               >
-                VISIT HERE
-              </button>
-            </div>
-          </article>
-          <article
-            class="relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/bible.jpg')]"
-          >
-            <div
-              class="absolute inset-0 bg-[#44033E] bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
+                <h4 class="mb-5">Foundation of Faith Baptismal Course</h4>
+                <button
+                  class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+                >
+                  VISIT HERE
+                </button>
+              </div>
+            </article>
+            <article
+              class="swiper-slide relative bg-cover bg-center bg-no-repeat bg-[url('./public/image/bible.jpg')]"
             >
-              <h4 class="mb-5">Find Your Divine Fellowship Alloted"</h4>
-              <button
-                class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+              <div
+                class="absolute inset-0 bg-[#44033E] bg-opacity-80 flex flex-col justify-center items-center w-full h-full text-white p-10 text-center"
               >
-                VISIT HERE
-              </button>
-            </div>
-          </article>
+                <h4 class="mb-5">Find Your Divine Fellowship Alloted"</h4>
+                <button
+                  class="py-2 px-3 border-2 border-white bg-transparent text-sm text-white font-medium rounded-md tranisition"
+                >
+                  VISIT HERE
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
         </div>
       </section>
       <section class="py-10 lg:py-20 bg-[#44033E]/20">
@@ -515,6 +528,57 @@
         </div>
       </div>
     </footer>
+    <script src="./public/js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+      ScrollReveal().reveal("section");
+      ScrollReveal({
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-out",
+        reset: false, // Prevents animations from repeating every scroll
+      });
+
+      // Reveal animations
+      ScrollReveal().reveal(".card", {
+        origin: "bottom",
+        interval: 200, // Adds staggered reveal for multiple elements
+      });
+
+      ScrollReveal().reveal("h1, h2, h3, h4, li, button", {
+        origin: "top",
+        delay: 200,
+      });
+
+      ScrollReveal().reveal("p", {
+        origin: "bottom",
+        delay: 400,
+      });
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 3,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
   </body>
 </html>
