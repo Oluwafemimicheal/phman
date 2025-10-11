@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Roboto";
+  font-display: block;
+  src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: block;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  resize: vertical;
+}
+.shake {
+  animation: shake 0.35s;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

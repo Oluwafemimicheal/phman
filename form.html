@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PHMAN | Prayer Request Form</title>
+    <link rel="stylesheet" href="./public/css/prayerRequestForm.css" />
+  </head>
+  <body
+    class="bg-gradient-to-b from-sky-50 to-pink-950 min-h-screen flex items-center justify-center p-6"
+  >
+    <div
+      class="logo w-[500px] text-center flex flex-col justify-center items-center"
+    >
+      <div class="">
+        <img
+          src="./public/image/Apostle-removebg-preview.png"
+          alt=""
+          width="400"
+          class="fixed top-60 left-20"
+        />
+        <div
+          class="w-[max-content] bg-pink-900 p-2 px-6 rounded-md shadow-lg text-white fixed bottom-3 left-40"
+        >
+          <small class="italic text-gray-300">Prayer Coordinator</small>
+          <h1>Apostle David Oluwapemi</h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-3xl w-full bg-white/60 backdrop-blur rounded-2xl shadow-lg border border-gray-100 p-8"
+    >
+      <header class="flex items-center gap-4 mb-6">
+        <div
+          class="w-12 h-12 rounded-lg flex items-center justify-center text-white font-bold"
+        >
+          <img
+            src="./public/image/PHMAN_Logo-removebg-preview.png"
+            alt="phman logo"
+          />
+        </div>
+        <div>
+          <h1 class="text-2xl font-semibold text-pink-800">Prayer Request</h1>
+          <p class="text-sm text-gray-500">
+            Share your prayer — confidential or for the community.
+          </p>
+        </div>
+      </header>
+
+      <form id="prayerForm" class="space-y-6" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Full name</label
+            >
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              class="mt-1 block w-full rounded-lg border-gray-200 p-2 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 outline-none"
+              required
+              aria-required="true"
+            />
+            <p class="mt-1 text-xs text-red-600 hidden" data-error-for="name">
+              Please enter your name.
+            </p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email
+              <span class="text-gray-400 text-xs">(optional)</span></label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              class="mt-1 block w-full rounded-lg border-gray-200 p-2 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 outline-none"
+            />
+            <p class="mt-1 text-xs text-red-600 hidden" data-error-for="email">
+              Please enter a valid email address.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label
+              for="category"
+              class="block text-sm font-medium text-gray-700"
+              >Category</label
+            >
+            <select
+              id="category"
+              name="category"
+              class="mt-1 block w-full rounded-lg border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 p-2 outline-none"
+            >
+              <option value="petition">Petition</option>
+              <option value="thanksgiving">Thanksgiving</option>
+              <option value="intercession">Intercession</option>
+              <option value="healing">Healing</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Visibility</label
+            >
+            <div class="mt-1 flex items-center gap-3">
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="visibility"
+                  value="private"
+                  checked
+                  class="h-4 w-4 text-indigo-600 border-gray-300"
+                />
+                <span class="text-sm text-gray-700">Private</span>
+              </label>
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="visibility"
+                  value="community"
+                  class="h-4 w-4 text-indigo-600 border-gray-300"
+                />
+                <span class="text-sm text-gray-700">Community</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="prayer" class="block text-sm font-medium text-gray-700"
+            >Prayer / Request</label
+          >
+          <textarea
+            id="prayer"
+            name="prayer"
+            rows="5"
+            placeholder="Write your prayer or request here..."
+            class="mt-1 block w-full rounded-lg border-gray-200 p-2 outline-none shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300"
+            required
+            aria-required="true"
+          ></textarea>
+          <p class="mt-1 text-xs text-red-600 hidden" data-error-for="prayer">
+            Please write your prayer request.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+          <div>
+            <label for="date" class="block text-sm font-medium text-gray-700"
+              >Date</label
+            >
+            <input
+              id="date"
+              name="date"
+              type="date"
+              class="mt-1 block w-full rounded-lg border-gray-200 p-2 outline-none shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300"
+            />
+          </div>
+
+          <div>
+            <label for="urgency" class="block text-sm font-medium text-gray-700"
+              >Urgency</label
+            >
+            <select
+              id="urgency"
+              name="urgency"
+              class="mt-1 block w-full rounded-lg border-gray-200 p-2 outline-none shadow-sm focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300"
+            >
+              <option value="low">Low</option>
+              <option value="normal">Normal</option>
+              <option value="high">High</option>
+              <option value="critical">Critical</option>
+            </select>
+          </div>
+
+          <div class="text-sm">
+            <label class="inline-flex items-center gap-2">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                class="h-4 w-4 text-indigo-600 border-gray-300"
+              />
+              <span>I allow the team to follow up (optional)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-4">
+          <button
+            type="submit"
+            class="inline-flex items-center p-2 outline-none gap-2 px-4 py-2 rounded-lg bg-pink-700 text-white font-medium shadow hover:bg-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden
+            >
+              <path
+                d="M2.94 6.06A8 8 0 1110 18a8 8 0 01-7.06-11.94zM10 11a3 3 0 100-6 3 3 0 000 6z"
+              />
+            </svg>
+            Submit Prayer
+          </button>
+
+          <button
+            type="button"
+            id="clearBtn"
+            class="px-4 py-2 rounded-lg border border-gray-200 bg-white text-gray-700 shadow-sm hover:bg-gray-50"
+          >
+            Clear
+          </button>
+        </div>
+
+        <div
+          id="status"
+          class="mt-2 text-sm text-green-700 hidden"
+          role="status"
+          aria-live="polite"
+        >
+          Your prayer has been submitted. Thank you.
+        </div>
+      </form>
+
+      <footer class="mt-6 text-sm text-center text-pink-900">
+        Confidential submissions remain private. Community prayers may be shared
+        publicly with names removed unless permission given.
+      </footer>
+    </div>
+
+    <script src="./public/js/form.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
