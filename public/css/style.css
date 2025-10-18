@@ -80,3 +80,8 @@ button:hover {
     height: 300px;
   }
 }
+
+details,
+summary {
+  appearance: none;
+}
